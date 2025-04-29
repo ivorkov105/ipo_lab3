@@ -1,0 +1,519 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #f5f5f5;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TabPane prefHeight="600.0" prefWidth="800.0" tabClosingPolicy="UNAVAILABLE">
+         <tabs>
+            <!-- Вкладка статусов рейсов -->
+            <Tab closable="false" text="Статусы рейсов">
+               <content>
+                  <ScrollPane fitToWidth="true">
+                     <content>
+                        <VBox spacing="15.0" style="-fx-padding: 20;">
+                           <children>
+                              <!-- Рейс 1 -->
+                              <VBox spacing="10.0" style="-fx-background-color: white; -fx-border-color: #e0e0e0; -fx-border-radius: 5;">
+                                 <padding>
+                                    <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                                 </padding>
+                                 <children>
+                                    <Label text="Москва - Санкт-Петербург">
+                                       <font>
+                                          <Font name="System Bold" size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="01.07.2024 08:00 - 01.07.2024 15:00" />
+                                    <HBox spacing="20.0">
+                                       <children>
+                                          <Label text="Водитель: Иванов И.И." />
+                                          <Label text="Автобус: Mercedes-Benz Travego" />
+                                          <Label text="Пассажиров: 32/45" />
+                                       </children>
+                                    </HBox>
+                                    <Separator />
+                                    <HBox alignment="CENTER_LEFT" prefHeight="26.0" prefWidth="677.0" spacing="10.0">
+                                       <children>
+                                          <Label text="Статус:">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <ComboBox prefWidth="200.0" value="Отправлен на редактирование">
+                                             <items>
+                                                <FXCollections fx:factory="observableArrayList">
+                                                   <String fx:value="На рассмотрении" />
+                                                   <String fx:value="Отправлен на редактирование" />
+                                                   <String fx:value="Запланирован" />
+                                                   <String fx:value="Готовится к отправке" />
+                                                   <String fx:value="В пути" />
+                                                   <String fx:value="На промежуточной остановке" />
+                                                   <String fx:value="Прибыл" />
+                                                </FXCollections>
+                                             </items>
+                                          </ComboBox>
+                                          <TextField prefHeight="62.0" prefWidth="426.0" promptText="Причина" />
+                                       </children>
+                                    </HBox>
+                                    <Button disable="true" mnemonicParsing="false" style="-fx-background-color: #4CAF50; -fx-text-fill: white;" text="Подтвердить" />
+                                 </children>
+                              </VBox>
+
+                              <!-- Рейс 2 -->
+                              <VBox spacing="10.0" style="-fx-background-color: white; -fx-border-color: #e0e0e0; -fx-border-radius: 5;">
+                                 <padding>
+                                    <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                                 </padding>
+                                 <children>
+                                    <Label text="Казань - Нижний Новгород">
+                                       <font>
+                                          <Font name="System Bold" size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="05.07.2024 10:30 - 05.07.2024 16:00" />
+                                    <HBox spacing="20.0">
+                                       <children>
+                                          <Label text="Водитель: Петров П.П." />
+                                          <Label text="Автобус: Volvo 9900" />
+                                          <Label text="Пассажиров: 28/50" />
+                                       </children>
+                                    </HBox>
+                                    <Separator />
+                                    <HBox alignment="CENTER_LEFT" spacing="10.0">
+                                       <children>
+                                          <Label text="Статус:">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <ComboBox prefWidth="200.0" value="Запланирован">
+                                             <items>
+                                                <FXCollections fx:factory="observableArrayList">
+                                                   <String fx:value="Запланирован" />
+                                                   <String fx:value="Готовится к отправке" />
+                                                   <String fx:value="В пути" />
+                                                   <String fx:value="На промежуточной остановке" />
+                                                   <String fx:value="Прибыл" />
+                                                </FXCollections>
+                                             </items>
+                                          </ComboBox>
+                                       </children>
+                                    </HBox>
+                                    <Button disable="true" mnemonicParsing="false" style="-fx-background-color: #4CAF50; -fx-text-fill: white;" text="Подтвердить" />
+                                 </children>
+                              </VBox>
+
+                              <!-- Рейс 3 -->
+                              <VBox spacing="10.0" style="-fx-background-color: white; -fx-border-color: #e0e0e0; -fx-border-radius: 5;">
+                                 <padding>
+                                    <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                                 </padding>
+                                 <children>
+                                    <Label text="Екатеринбург - Челябинск">
+                                       <font>
+                                          <Font name="System Bold" size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="10.07.2024 09:15 - 10.07.2024 12:30" />
+                                    <HBox spacing="20.0">
+                                       <children>
+                                          <Label text="Водитель: Сидоров С.С." />
+                                          <Label text="Автобус: Setra S 517 HDH" />
+                                          <Label text="Пассажиров: 18/45" />
+                                       </children>
+                                    </HBox>
+                                    <Separator />
+                                    <HBox alignment="CENTER_LEFT" spacing="10.0">
+                                       <children>
+                                          <Label text="Статус:">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <ComboBox prefWidth="200.0" value="На промежуточной остановке">
+                                             <items>
+                                                <FXCollections fx:factory="observableArrayList">
+                                                   <String fx:value="Запланирован" />
+                                                   <String fx:value="Готовится к отправке" />
+                                                   <String fx:value="В пути" />
+                                                   <String fx:value="На промежуточной остановке" />
+                                                   <String fx:value="Прибыл" />
+                                                </FXCollections>
+                                             </items>
+                                          </ComboBox>
+                                          <Label text="Текущая остановка:">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <ComboBox prefWidth="150.0" value="Тверь">
+                                             <items>
+                                                <FXCollections fx:factory="observableArrayList">
+                                                   <String fx:value="Тверь" />
+                                                   <String fx:value="Вышний Волочёк" />
+                                                   <String fx:value="Тосно" />
+                                                </FXCollections>
+                                             </items>
+                                          </ComboBox>
+                                       </children>
+                                    </HBox>
+                                    <Button disable="true" mnemonicParsing="false" style="-fx-background-color: #4CAF50; -fx-text-fill: white;" text="Подтвердить" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </VBox>
+                     </content>
+                  </ScrollPane>
+               </content>
+            </Tab>
+
+            <!-- Вкладка жалоб и комментариев -->
+            <Tab closable="false" text="Жалобы/Комментарии">
+               <content>
+                  <ScrollPane fitToWidth="true">
+                     <content>
+                        <VBox spacing="15.0" style="-fx-padding: 20;">
+                           <children>
+                              <!-- Жалоба 1 -->
+                              <VBox spacing="10.0" style="-fx-background-color: white; -fx-border-color: #e0e0e0; -fx-border-radius: 5;">
+                                 <padding>
+                                    <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                                 </padding>
+                                 <children>
+                                    <Label text="Жалоба от: Иванова А.К.">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="На рейс: Москва - Санкт-Петербург, 01.06.2024" />
+                                    <Label text="Водитель: Иванов И.И., Автобус: Mercedes-Benz Travego" />
+                                    <Label text="Причина: Плохая работа кондиционера" />
+                                    <Label text="Комментарий: Кондиционер работал очень слабо, в салоне было душно." wrapText="true" />
+                                    <Separator />
+                                    <HBox alignment="CENTER_RIGHT" spacing="10.0">
+                                       <children>
+                                          <Button mnemonicParsing="false" style="-fx-background-color: #4CAF50; -fx-text-fill: white;" text="Меры приняты" />
+                                          <Button mnemonicParsing="false" style="-fx-background-color: #F44336; -fx-text-fill: white;" text="Удалить" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+
+                              <!-- Отзыв 1 -->
+                              <VBox spacing="10.0" style="-fx-background-color: white; -fx-border-color: #e0e0e0; -fx-border-radius: 5;">
+                                 <padding>
+                                    <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                                 </padding>
+                                 <children>
+                                    <Label text="Отзыв от: Петрова М.Д.">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Рейтинг: 5.0" textFill="#4CAF50" />
+                                    <Label text="Рейс: Москва - Санкт-Петербург, 01.06.2024" />
+                                    <Label text="Комментарий: Отличная поездка! Автобус новый, чистый, есть розетки для зарядки телефонов." wrapText="true" />
+                                    <Separator />
+                                    <HBox alignment="CENTER_RIGHT" spacing="10.0">
+                                       <children>
+                                          <Button mnemonicParsing="false" style="-fx-background-color: #4CAF50; -fx-text-fill: white;" text="Принять" />
+                                          <Button mnemonicParsing="false" style="-fx-background-color: #F44336; -fx-text-fill: white;" text="Удалить" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+
+                              <!-- Жалоба 2 -->
+                              <VBox spacing="10.0" style="-fx-background-color: white; -fx-border-color: #e0e0e0; -fx-border-radius: 5;">
+                                 <padding>
+                                    <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                                 </padding>
+                                 <children>
+                                    <Label text="Жалоба от: Сидорова В.А.">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="На водителя: Петров П.П." />
+                                    <Label text="Рейс: Казань - Нижний Новгород, 05.06.2024" />
+                                    <Label text="Причина: Грубое поведение водителя" />
+                                    <Label text="Комментарий: Водитель был груб при проверке билетов, разговаривал на повышенных тонах." wrapText="true" />
+                                    <Separator />
+                                    <HBox alignment="CENTER_RIGHT" spacing="10.0">
+                                       <children>
+                                          <Button mnemonicParsing="false" style="-fx-background-color: #4CAF50; -fx-text-fill: white;" text="Меры приняты" />
+                                          <Button mnemonicParsing="false" style="-fx-background-color: #F44336; -fx-text-fill: white;" text="Удалить" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </VBox>
+                     </content>
+                  </ScrollPane>
+               </content>
+            </Tab>
+
+            <!-- Вкладка добавления ТС -->
+            <Tab closable="false" text="Транспортные средства">
+               <content>
+                  <ScrollPane fitToWidth="true">
+                     <content>
+                        <VBox spacing="15.0" style="-fx-padding: 20;">
+                           <children>
+                              <VBox spacing="10.0" style="-fx-background-color: white; -fx-border-color: #e0e0e0; -fx-border-radius: 5;">
+                                 <padding>
+                                    <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                                 </padding>
+                                 <children>
+                                    <Label text="Добавление транспортного средства">
+                                       <font>
+                                          <Font name="System Bold" size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <Separator />
+
+                                    <!-- Загрузка фото -->
+                                    <VBox spacing="5.0">
+                                       <children>
+                                          <Label text="Фото автобуса:">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <HBox alignment="CENTER_LEFT" spacing="10.0">
+                                             <children>
+                                                <ImageView fitHeight="100.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../../../../images/trip1.jpg" />
+                                                   </image>
+                                                </ImageView>
+                                                <VBox spacing="5.0">
+                                                   <children>
+                                                      <Button mnemonicParsing="false" prefWidth="150.0" style="-fx-background-color: #2196F3; -fx-text-fill: white;" text="Выбрать фото" />
+                                                      <Label text="Допустимые форматы: JPG, PNG" textFill="#757575">
+                                                         <font>
+                                                            <Font size="12.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </VBox>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                    <VBox spacing="5.0">
+                                       <children>
+                                          <Label text="Государственный номер:">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField promptText="Ввведите номер" />
+                                       </children>
+                                    </VBox>
+
+                                    <!-- Поля для ввода -->
+                                    <VBox spacing="5.0">
+                                       <children>
+                                          <Label text="Модель автобуса:">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField promptText="Введите модель автобуса" />
+                                       </children>
+                                    </VBox>
+
+                                    <VBox spacing="5.0">
+                                       <children>
+                                          <Label text="Количество мест:">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField promptText="Введите количество мест" />
+                                       </children>
+                                    </VBox>
+
+                                    <!-- Загрузка схемы рассадки -->
+                                    <VBox spacing="5.0">
+                                       <children>
+                                          <Label text="Схема рассадки:">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <HBox alignment="CENTER_LEFT" spacing="10.0">
+                                             <children>
+                                                <Button mnemonicParsing="false" prefWidth="150.0" style="-fx-background-color: #2196F3; -fx-text-fill: white;" text="Выбрать схему" />
+                                                <Label text="Допустимые форматы: PDF, JPG, PNG" textFill="#757575">
+                                                   <font>
+                                                      <Font size="12.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+
+                                    <Separator />
+
+                                    <Button mnemonicParsing="false" style="-fx-background-color: #4CAF50; -fx-text-fill: white;" text="Добавить автобус">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Button>
+                                    <HBox prefHeight="62.0" prefWidth="714.0" spacing="20.0">
+                                       <children>
+                                          <ComboBox prefHeight="30.0" prefWidth="201.0" value="Выберите ГосНомер">
+                                             <items>
+                                                <FXCollections fx:factory="observableArrayList">
+                                                   <String fx:value="АА 555 78" />
+                                                   <String fx:value="нн 050 77" />
+                                                   <String fx:value="мо 680 77" />
+                                                   <String fx:value="мо 985 77" />
+                                                </FXCollections>
+                                             </items>
+                                          </ComboBox>
+                                          <Button mnemonicParsing="false" style="-fx-background-color: red; -fx-text-fill: white;" text="Удалить автобус">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Button>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </VBox>
+                     </content>
+                  </ScrollPane>
+               </content>
+            </Tab>
+
+            <!-- Вкладка добавления водителя -->
+            <Tab closable="false" text="Водители">
+               <content>
+                  <ScrollPane fitToWidth="true">
+                     <content>
+                        <VBox spacing="15.0" style="-fx-padding: 20;">
+                           <children>
+                              <VBox spacing="10.0" style="-fx-background-color: white; -fx-border-color: #e0e0e0; -fx-border-radius: 5;">
+                                 <padding>
+                                    <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                                 </padding>
+                                 <children>
+                                    <Label text="Добавление водителя">
+                                       <font>
+                                          <Font name="System Bold" size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <Separator />
+
+                                    <!-- Поля для ввода -->
+                                    <VBox spacing="5.0">
+                                       <children>
+                                          <Label text="ФИО водителя:">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField promptText="Введите ФИО водителя" />
+                                       </children>
+                                    </VBox>
+
+                                    <VBox spacing="5.0">
+                                       <children>
+                                          <Label text="Стаж работы (лет):">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField promptText="Введите стаж работы" />
+                                       </children>
+                                    </VBox>
+
+                                    <!-- Загрузка фото -->
+                                    <VBox spacing="5.0">
+                                       <children>
+                                          <Label text="Фото водителя:">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <HBox alignment="CENTER_LEFT" spacing="10.0">
+                                             <children>
+                                                <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../../../../images/avatar.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <VBox spacing="5.0">
+                                                   <children>
+                                                      <Button mnemonicParsing="false" prefWidth="150.0" style="-fx-background-color: #2196F3; -fx-text-fill: white;" text="Выбрать фото" />
+                                                      <Label text="Допустимые форматы: JPG, PNG" textFill="#757575">
+                                                         <font>
+                                                            <Font size="12.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </VBox>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+
+                                    <Separator />
+
+                                    <Button mnemonicParsing="false" style="-fx-background-color: #4CAF50; -fx-text-fill: white;" text="Добавить водителя">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Button>
+                                 </children>
+                              </VBox>
+                              <HBox prefHeight="62.0" prefWidth="714.0" spacing="20.0">
+                                 <children>
+                                    <ComboBox prefHeight="30.0" prefWidth="201.0" value="Выберите Водителя">
+                                       <items>
+                                          <FXCollections fx:factory="observableArrayList">
+                                             <String fx:value="Иванов Иван Иванович" />
+                                             <String fx:value="Михайлов Андрей Михаилов" />
+                                          </FXCollections>
+                                       </items>
+                                    </ComboBox>
+                                    <Button mnemonicParsing="false" style="-fx-background-color: red; -fx-text-fill: white;" text="Удалить Водителя">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </content>
+                  </ScrollPane>
+               </content>
+            </Tab>
+         </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

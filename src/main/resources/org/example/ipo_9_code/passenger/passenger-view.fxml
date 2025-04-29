@@ -16,9 +16,9 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #f5f5f5;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.ipo_9_code.Controllers.Cashier.PassController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #f5f5f5;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.ipo_9_code.Controllers.Passenger.PassengerController">
    <children>
-      <TabPane prefHeight="600.0" prefWidth="900.0" tabClosingPolicy="UNAVAILABLE">
+      <TabPane prefHeight="600.0" prefWidth="800.0" tabClosingPolicy="UNAVAILABLE">
          <tabs>
             <!-- Вкладка поиска рейсов -->
             <Tab text="Поиск рейсов">
@@ -109,9 +109,9 @@
                               <Font name="System Bold" size="14.0" />
                            </font>
                         </Label>
-                        <ScrollPane prefHeight="422.0" prefWidth="861.0">
+                        <ScrollPane prefHeight="489.0" prefWidth="779.0">
                            <content>
-                              <VBox prefHeight="410.0" prefWidth="864.0" spacing="15.0">
+                              <VBox prefHeight="418.0" prefWidth="748.0" spacing="15.0">
                                  <children>
                                     <!-- Рейс 1 -->
                                     <AnchorPane fx:id="trip1" onMouseClicked="#openTripDetails" prefHeight="120.0" prefWidth="730.0" style="-fx-background-color: white; -fx-border-color: #e0e0e0; -fx-border-radius: 5;">
@@ -377,7 +377,7 @@
                                     </Label>
                                     
                                     <!-- Прошедший рейс 1 -->
-                                    <AnchorPane fx:id="pastTrip1" prefHeight="80.0" prefWidth="730.0" style="-fx-background-color: white; -fx-border-color: #e0e0e0; -fx-border-radius: 5;">
+                                    <AnchorPane fx:id="pastTrip1" onContextMenuRequested="#showRatingMenu" prefHeight="80.0" prefWidth="730.0" style="-fx-background-color: white; -fx-border-color: #e0e0e0; -fx-border-radius: 5;">
                                        <children>
                                           <Label layoutX="15.0" layoutY="10.0" text="Москва - Казань">
                                              <font>
@@ -398,7 +398,7 @@
                                     </AnchorPane>
                                     
                                     <!-- Прошедший рейс 2 -->
-                                    <AnchorPane fx:id="pastTrip2" prefHeight="80.0" prefWidth="730.0" style="-fx-background-color: white; -fx-border-color: #e0e0e0; -fx-border-radius: 5;">
+                                    <AnchorPane fx:id="pastTrip2" onContextMenuRequested="#showRatingMenu" prefHeight="80.0" prefWidth="730.0" style="-fx-background-color: white; -fx-border-color: #e0e0e0; -fx-border-radius: 5;">
                                        <children>
                                           <Label layoutX="15.0" layoutY="10.0" text="Санкт-Петербург - Москва">
                                              <font>
@@ -419,7 +419,7 @@
                                     </AnchorPane>
                                     
                                     <!-- Прошедший рейс 3 -->
-                                    <AnchorPane fx:id="pastTrip3" prefHeight="80.0" prefWidth="730.0" style="-fx-background-color: white; -fx-border-color: #e0e0e0; -fx-border-radius: 5;">
+                                    <AnchorPane fx:id="pastTrip3" onContextMenuRequested="#showRatingMenu" prefHeight="80.0" prefWidth="730.0" style="-fx-background-color: white; -fx-border-color: #e0e0e0; -fx-border-radius: 5;">
                                        <children>
                                           <Label layoutX="15.0" layoutY="10.0" text="Нижний Новгород - Москва">
                                              <font>

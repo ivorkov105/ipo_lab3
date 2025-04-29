@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="490.0" prefWidth="502.0" spacing="15.0" style="-fx-background-color: white; -fx-border-color: #e0e0e0; -fx-border-width: 1px;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.ipo_9_code.Controllers.Passenger.PaymentController">
+   <children>
+      <Label text="Покупка билета" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      
+      <Separator prefWidth="200.0" />
+      
+      <Label text="Рейс: Москва - Санкт-Петербург">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      
+      <Label text="Место: 12">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      
+      <Label text="Стоимость: 2500 ₽" textFill="#1976d2">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      
+      <Separator prefWidth="200.0" />
+      
+      <Label text="Способы оплаты:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      
+      <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="250.0" style="-fx-background-color: #4CAF50; -fx-text-fill: white;" text="Оплатить онлайн">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      
+      <Separator prefWidth="200.0" />
+      
+      <Label text="Адреса ближайших касс и терминалов:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      
+      <VBox prefWidth="450.0" spacing="5.0">
+         <children>
+            <Label text="• Автовокзал №1: ул. Примерная, д. 123" wrapText="true" />
+            <Label text="• Терминал оплаты: ТЦ «Мегаполис», 1 этаж" wrapText="true" />
+            <Label text="• Касса №2: ул. Транспортная, д. 45, время работы: 8:00-20:00" wrapText="true" />
+            <Label text="• Железнодорожный вокзал, южный выход, касса №7" wrapText="true" />
+         </children>
+      </VBox>
+      
+      <HBox alignment="CENTER" spacing="15.0">
+         <children>
+            <Button fx:id="closeButton" mnemonicParsing="false" onAction="#closeWindow" prefHeight="40.0" prefWidth="150.0" style="-fx-background-color: #757575; -fx-text-fill: white;" text="Закрыть">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+</VBox>

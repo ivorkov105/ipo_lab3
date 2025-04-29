@@ -1,4 +1,4 @@
-package org.example.ipo_9_code.Controllers.Cashier;
+package org.example.ipo_9_code.Controllers.Passenger;
 
 import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
@@ -16,7 +16,8 @@ import org.example.ipo_9_code.Main;
 
 import java.io.IOException;
 
-public class PassController {
+public class PassengerController {
+
     @FXML
     private ComboBox<String> departureComboBox;
 
@@ -28,10 +29,10 @@ public class PassController {
 
     @FXML
     private ComboBox<String> busClassComboBox;
-
+    
     @FXML
     private ComboBox<String> ratingComboBox;
-
+    
     @FXML
     private AnchorPane trip1, trip2, trip3;
 
@@ -62,24 +63,50 @@ public class PassController {
     @FXML
     public void openTripDetails(MouseEvent event) {
         try {
-            FXMLLoader loader = new FXMLLoader(Main.class.getResource("cashier/cashier-pass-trip-view.fxml"));
+            FXMLLoader loader = new FXMLLoader(Main.class.getResource("passenger/trip-details-view.fxml"));
             Parent root = loader.load();
-
+            
             Stage stage = (Stage) ((AnchorPane) event.getSource()).getScene().getWindow();
             stage.setTitle("Подробная информация о рейсе");
             Scene scene = new Scene(root, 800, 600);
             stage.setScene(scene);
-
+            
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
-
+    
+    @FXML
+    public void showRatingMenu(ContextMenuEvent event) {
+        ContextMenu contextMenu = new ContextMenu();
+        MenuItem rateItem = new MenuItem("Оценить поездку");
+        
+        rateItem.setOnAction(_ -> openRatingWindow());
+        
+        contextMenu.getItems().add(rateItem);
+        contextMenu.show(((AnchorPane) event.getSource()), event.getScreenX(), event.getScreenY());
+    }
+    
     @FXML
     public void showCancelMenu(ContextMenuEvent event) {
         ContextMenu contextMenu = new ContextMenu();
         MenuItem cancelItem = new MenuItem("Отменить бронирование");
         contextMenu.getItems().add(cancelItem);
         contextMenu.show(((AnchorPane) event.getSource()), event.getScreenX(), event.getScreenY());
+    }
+    
+    private void openRatingWindow() {
+        try {
+            FXMLLoader loader = new FXMLLoader(Main.class.getResource("passenger/rating-window.fxml"));
+            Parent root = loader.load();
+            
+            Stage ratingStage = new Stage();
+            ratingStage.setTitle("Оценка поездки");
+            ratingStage.setScene(new Scene(root));
+            ratingStage.show();
+            
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }

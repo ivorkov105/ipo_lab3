@@ -19,7 +19,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #f8f8f8;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.ipo_9_code.Controllers.Cashier.TripInfoController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #f8f8f8;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.ipo_9_code.Controllers.Passenger.TripDetailsController">
    <children>
       <ScrollPane fitToWidth="true" prefHeight="700.0" prefWidth="900.0" style="-fx-background-color: transparent;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <content>
@@ -148,7 +148,7 @@
                                     </Label>
                                     <Label text="Количество мест: 45" />
                                     <Label text="Рейтинг автобуса: 4.7" />
-                                    <Label text="Государтсвенный номер: нн 550 78" />
+                                    <Label text="Государтсвенный номер: аа 070 77" />
                                  </children>
                               </VBox>
                            </children>
@@ -219,7 +219,7 @@
                                     <Font size="14.0" />
                                  </font>
                               </Button>
-                              <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #4CAF50; -fx-text-fill: white;" text="Купить билет">
+                              <Button mnemonicParsing="false" onAction="#buySeat" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #4CAF50; -fx-text-fill: white;" text="Купить билет">
                                  <font>
                                     <Font size="14.0" />
                                  </font>

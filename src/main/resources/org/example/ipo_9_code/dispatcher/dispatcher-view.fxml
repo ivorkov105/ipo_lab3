@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #f5f5f5;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.ipo_9_code.Controllers.Dispatcher.DispatcherController">
+   <children>
+      <VBox prefHeight="600.0" prefWidth="900.0" spacing="15.0" style="-fx-padding: 20;">
+         <children>
+            <HBox alignment="CENTER" spacing="10.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#openTripEditWindow" style="-fx-background-color: #4CAF50; -fx-text-fill: white;" text="Создать рейс">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+
+            <Label fx:id="title" text="Список рейсов">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+
+            <ScrollPane fitToWidth="true">
+               <content>
+                  <VBox spacing="15.0">
+                     <children>
+                        <!-- Рейс 1 -->
+                        <VBox spacing="10.0" style="-fx-background-color: white; -fx-border-color: #e0e0e0; -fx-border-radius: 5;">
+                           <padding>
+                              <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                           </padding>
+                           <children>
+                              <HBox spacing="20.0">
+                                 <children>
+                                    <ImageView fitHeight="100.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../../images/trip1.jpg" />
+                                       </image>
+                                    </ImageView>
+                                    <VBox spacing="5.0">
+                                       <children>
+                                          <Label text="Москва - Санкт-Петербург">
+                                             <font>
+                                                <Font name="System Bold" size="16.0" />
+                                             </font>
+                                          </Label>
+                                          <Label text="01.07.2024 08:00 - 01.07.2024 15:00" />
+                                          <Label text="Водитель: Иванов И.И." />
+                                          <Label text="Автобус: Mercedes-Benz Travego (45 мест)" />
+                                          <Label text="Цена: 2500 ₽" textFill="#1976d2">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="0.0" prefWidth="813.0" spacing="20.0">
+                                 <children>
+                                    <Button alignment="CENTER_RIGHT" mnemonicParsing="false" onAction="#openTripEditWindow" style="-fx-background-color: #2196F3; -fx-text-fill: white;" text="Редактировать">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Button>
+                                    <Label prefHeight="25.0" prefWidth="189.0" text="Статус: Отправлен на доработку" />
+                                    <Label prefHeight="26.0" prefWidth="482.0" text="Причина: Указано не верное время прибытия" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+
+                        <!-- Рейс 2 -->
+                        <VBox spacing="10.0" style="-fx-background-color: white; -fx-border-color: #e0e0e0; -fx-border-radius: 5;">
+                           <padding>
+                              <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                           </padding>
+                           <children>
+                              <HBox spacing="20.0">
+                                 <children>
+                                    <ImageView fitHeight="100.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../../images/trip2.jpg" />
+                                       </image>
+                                    </ImageView>
+                                    <VBox spacing="5.0">
+                                       <children>
+                                          <Label text="Казань - Нижний Новгород">
+                                             <font>
+                                                <Font name="System Bold" size="16.0" />
+                                             </font>
+                                          </Label>
+                                          <Label text="05.07.2024 10:30 - 05.07.2024 16:00" />
+                                          <Label text="Водитель: Петров П.П." />
+                                          <Label text="Автобус: Volvo 9900 (50 мест)" />
+                                          <Label text="Цена: 1800 ₽" textFill="#1976d2">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="0.0" prefWidth="813.0" spacing="20.0">
+                                 <children>
+                                    <Button alignment="CENTER_RIGHT" mnemonicParsing="false" onAction="#openTripEditWindow" style="-fx-background-color: #2196F3; -fx-text-fill: white;" text="Редактировать">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Button>
+                                    <Label prefHeight="25.0" prefWidth="189.0" text="Статус: На рассмотрении" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+
+                        <!-- Рейс 3 -->
+                        <VBox spacing="10.0" style="-fx-background-color: white; -fx-border-color: #e0e0e0; -fx-border-radius: 5;">
+                           <padding>
+                              <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                           </padding>
+                           <children>
+                              <HBox spacing="20.0">
+                                 <children>
+                                    <ImageView fitHeight="100.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../../images/trip3.jpg" />
+                                       </image>
+                                    </ImageView>
+                                    <VBox spacing="5.0">
+                                       <children>
+                                          <Label text="Екатеринбург - Челябинск">
+                                             <font>
+                                                <Font name="System Bold" size="16.0" />
+                                             </font>
+                                          </Label>
+                                          <Label text="10.07.2024 09:15 - 10.07.2024 12:30" />
+                                          <Label text="Водитель: Сидоров С.С." />
+                                          <Label text="Автобус: Setra S 517 HDH (45 мест)" />
+                                          <Label text="Цена: 1200 ₽" textFill="#1976d2">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="0.0" prefWidth="813.0" spacing="20.0">
+                                 <children>
+                                    <Button alignment="CENTER_RIGHT" mnemonicParsing="false" onAction="#openTripEditWindow" style="-fx-background-color: #2196F3; -fx-text-fill: white;" text="Редактировать">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Button>
+                                    <Label prefHeight="25.0" prefWidth="189.0" text="Статус: Отправлен на доработку" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </VBox>
+               </content>
+            </ScrollPane>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
