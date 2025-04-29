@@ -1,0 +1,452 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #f5f5f5;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.ipo_9_code.Controllers.Passenger.PassengerController">
+   <children>
+      <TabPane prefHeight="600.0" prefWidth="800.0" tabClosingPolicy="UNAVAILABLE">
+         <tabs>
+            <!-- Вкладка поиска рейсов -->
+            <Tab text="Поиск рейсов">
+               <content>
+                  <VBox prefHeight="200.0" prefWidth="100.0" spacing="10.0">
+                     <children>
+                        <HBox prefHeight="40.0" prefWidth="750.0" spacing="15.0">
+                           <children>
+                              <VBox>
+                                 <children>
+                                    <Label text="Город отправления">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <ComboBox fx:id="departureComboBox" prefWidth="150.0" promptText="Выберите город">
+                                       <VBox.margin>
+                                          <Insets top="5.0" />
+                                       </VBox.margin>
+                                    </ComboBox>
+                                 </children>
+                              </VBox>
+                              <VBox>
+                                 <children>
+                                    <Label text="Город прибытия">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <ComboBox fx:id="arrivalComboBox" prefWidth="150.0" promptText="Выберите город">
+                                       <VBox.margin>
+                                          <Insets top="5.0" />
+                                       </VBox.margin>
+                                    </ComboBox>
+                                 </children>
+                              </VBox>
+                              <VBox>
+                                 <children>
+                                    <Label text="Дата отправления">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <ComboBox fx:id="dateComboBox" prefWidth="150.0" promptText="Выберите дату">
+                                       <VBox.margin>
+                                          <Insets top="5.0" />
+                                       </VBox.margin>
+                                    </ComboBox>
+                                 </children>
+                              </VBox>
+                              <VBox>
+                                 <children>
+                                    <Label text="Класс автобуса">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <ComboBox fx:id="busClassComboBox" prefWidth="150.0" promptText="Выберите класс">
+                                       <VBox.margin>
+                                          <Insets top="5.0" />
+                                       </VBox.margin>
+                                    </ComboBox>
+                                 </children>
+                              </VBox>
+                              <VBox>
+                                 <children>
+                                    <Label text="Рейтинг">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <ComboBox fx:id="ratingComboBox" prefWidth="150.0" promptText="Выберите рейтинг">
+                                       <VBox.margin>
+                                          <Insets top="5.0" />
+                                       </VBox.margin>
+                                    </ComboBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <Button mnemonicParsing="false" style="-fx-background-color: #757575; -fx-text-fill: white;" text="Сбросить фильтры">
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin>
+                        </Button>
+                        <Label text="Доступные рейсы:">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <ScrollPane prefHeight="489.0" prefWidth="779.0">
+                           <content>
+                              <VBox prefHeight="418.0" prefWidth="748.0" spacing="15.0">
+                                 <children>
+                                    <!-- Рейс 1 -->
+                                    <AnchorPane fx:id="trip1" onMouseClicked="#openTripDetails" prefHeight="120.0" prefWidth="730.0" style="-fx-background-color: white; -fx-border-color: #e0e0e0; -fx-border-radius: 5;">
+                                       <children>
+                                          <ImageView fitHeight="100.0" fitWidth="150.0" layoutX="15.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../../../images/trip1.jpg" />
+                                             </image>
+                                          </ImageView>
+                                          <Label layoutX="180.0" layoutY="10.0" text="Москва - Санкт-Петербург">
+                                             <font>
+                                                <Font name="System Bold" size="16.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="180.0" layoutY="40.0" text="Водитель: Иванов Иван Иванович" />
+                                          <Label layoutX="180.0" layoutY="60.0" text="Автобус: Mercedes-Benz Travego" />
+                                          <Label layoutX="180.0" layoutY="80.0" text="01.06.2024 08:00 - 01.06.2024 15:00" />
+                                          <Label layoutX="600.0" layoutY="10.0" text="Рейтинг: 4.8">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="600.0" layoutY="40.0" text="Цена: 2500 ₽" textFill="#1976d2">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="600.0" layoutY="60.0" text="Заполнено: 32/45" textFill="#388e3c">
+                                             <font>
+                                                <Font size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Button layoutX="600.0" layoutY="80.0" mnemonicParsing="false" style="-fx-background-color: #4CAF50; -fx-text-fill: white;" text="Подробнее" />
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </padding>
+                                    </AnchorPane>
+                                    
+                                    <!-- Рейс 2 -->
+                                    <AnchorPane fx:id="trip2" onMouseClicked="#openTripDetails" prefHeight="120.0" prefWidth="730.0" style="-fx-background-color: white; -fx-border-color: #e0e0e0; -fx-border-radius: 5;">
+                                       <children>
+                                          <ImageView fitHeight="103.0" fitWidth="150.0" layoutX="15.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../../../images/trip2.jpg" />
+                                             </image>
+                                          </ImageView>
+                                          <Label layoutX="180.0" layoutY="10.0" text="Казань - Нижний Новгород">
+                                             <font>
+                                                <Font name="System Bold" size="16.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="180.0" layoutY="40.0" text="Водитель: Петров Петр Петрович" />
+                                          <Label layoutX="180.0" layoutY="60.0" text="Автобус: Volvo 9900" />
+                                          <Label layoutX="180.0" layoutY="80.0" text="05.06.2024 10:30 - 05.06.2024 16:00" />
+                                          <Label layoutX="600.0" layoutY="10.0" text="Рейтинг: 4.5">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="600.0" layoutY="40.0" text="Цена: 1800 ₽" textFill="#1976d2">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="600.0" layoutY="60.0" text="Заполнено: 28/50" textFill="#388e3c">
+                                             <font>
+                                                <Font size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Button layoutX="600.0" layoutY="80.0" mnemonicParsing="false" style="-fx-background-color: #4CAF50; -fx-text-fill: white;" text="Подробнее" />
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </padding>
+                                    </AnchorPane>
+                                    
+                                    <!-- Рейс 3 -->
+                                    <AnchorPane fx:id="trip3" onMouseClicked="#openTripDetails" prefHeight="120.0" prefWidth="730.0" style="-fx-background-color: white; -fx-border-color: #e0e0e0; -fx-border-radius: 5;">
+                                       <children>
+                                          <ImageView fitHeight="100.0" fitWidth="150.0" layoutX="15.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../../../images/trip3.jpg" />
+                                             </image>
+                                          </ImageView>
+                                          <Label layoutX="180.0" layoutY="10.0" text="Екатеринбург - Челябинск">
+                                             <font>
+                                                <Font name="System Bold" size="16.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="180.0" layoutY="40.0" text="Водитель: Сидоров Сидор Сидорович" />
+                                          <Label layoutX="180.0" layoutY="60.0" text="Автобус: Setra S 517 HDH" />
+                                          <Label layoutX="180.0" layoutY="80.0" text="10.06.2024 09:15 - 10.06.2024 12:30" />
+                                          <Label layoutX="600.0" layoutY="10.0" text="Рейтинг: 4.7">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="600.0" layoutY="40.0" text="Цена: 1200 ₽" textFill="#1976d2">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="600.0" layoutY="60.0" text="Заполнено: 18/45" textFill="#388e3c">
+                                             <font>
+                                                <Font size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Button layoutX="600.0" layoutY="80.0" mnemonicParsing="false" style="-fx-background-color: #4CAF50; -fx-text-fill: white;" text="Подробнее" />
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </padding>
+                                    </AnchorPane>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </padding>
+                              </VBox>
+                           </content>
+                        </ScrollPane>
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                  </VBox>
+               </content>
+            </Tab>
+            
+            <!-- Вкладка данных о пассажире -->
+            <Tab text="Личный кабинет">
+               <content>
+                  <ScrollPane fitToWidth="true">
+                     <content>
+                        <VBox spacing="15.0">
+                           <padding>
+                              <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                           </padding>
+                           <children>
+                              <!-- Персональные данные -->
+                              <VBox spacing="10.0" style="-fx-background-color: white; -fx-border-color: #e0e0e0; -fx-border-radius: 5;">
+                                 <padding>
+                                    <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                                 </padding>
+                                 <children>
+                                    <Label text="Персональные данные">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Separator />
+                                    <HBox alignment="CENTER_LEFT" spacing="10.0">
+                                       <children>
+                                          <Label text="ФИО:">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label text="Иванов Иван Иванович" />
+                                       </children>
+                                    </HBox>
+                                    <VBox spacing="5.0">
+                                       <children>
+                                          <Label text="Загрузка паспорта:">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <HBox alignment="CENTER_LEFT" spacing="10.0">
+                                             <children>
+                                                <TextField editable="false" prefHeight="30.0" prefWidth="249.0" promptText="Файл не выбран" />
+                                                <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="120.0" style="-fx-background-color: #2196F3; -fx-text-fill: white;" text="Выбрать файл" />
+                                             </children>
+                                          </HBox>
+                                          <Label text="Допустимые форматы: PDF, JPG, PNG. Размер файла не более 5 МБ." textFill="#757575">
+                                             <font>
+                                                <Font size="12.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </VBox>
+                              
+                              <!-- Предстоящие рейсы -->
+                              <VBox spacing="10.0" style="-fx-background-color: white; -fx-border-color: #e0e0e0; -fx-border-radius: 5;">
+                                 <padding>
+                                    <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                                 </padding>
+                                 <children>
+                                    <Label text="Предстоящие рейсы">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Separator />
+                                    <Label text="Щелкните правой кнопкой мыши по рейсу, чтобы отменить его" textFill="#757575">
+                                       <font>
+                                          <Font size="12.0" />
+                                       </font>
+                                    </Label>
+                                    
+                                    <!-- Предстоящий рейс 1 -->
+                                    <AnchorPane fx:id="upcomingTrip1" onContextMenuRequested="#showCancelMenu" prefHeight="80.0" prefWidth="730.0" style="-fx-background-color: white; -fx-border-color: #e0e0e0; -fx-border-radius: 5;">
+                                       <children>
+                                          <Label layoutX="15.0" layoutY="10.0" text="Москва - Санкт-Петербург">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="15.0" layoutY="35.0" text="Дата: 01.07.2024 08:00 - 01.07.2024 15:00" />
+                                          <Label layoutX="15.0" layoutY="55.0" text="Место: 23, Автобус: Mercedes-Benz Travego" />
+                                          <Label layoutX="600.0" layoutY="30.0" text="2500 ₽" textFill="#1976d2">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                       </padding>
+                                    </AnchorPane>
+                                    
+                                    <!-- Предстоящий рейс 2 -->
+                                    <AnchorPane fx:id="upcomingTrip2" onContextMenuRequested="#showCancelMenu" prefHeight="80.0" prefWidth="730.0" style="-fx-background-color: white; -fx-border-color: #e0e0e0; -fx-border-radius: 5;">
+                                       <children>
+                                          <Label layoutX="15.0" layoutY="10.0" text="Москва - Нижний Новгород">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="15.0" layoutY="35.0" text="Дата: 15.07.2024 10:30 - 15.07.2024 16:00" />
+                                          <Label layoutX="15.0" layoutY="55.0" text="Место: 12, Автобус: Volvo 9900" />
+                                          <Label layoutX="600.0" layoutY="30.0" text="1800 ₽" textFill="#1976d2">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                       </padding>
+                                    </AnchorPane>
+                                 </children>
+                              </VBox>
+                              
+                              <!-- Прошедшие рейсы -->
+                              <VBox spacing="10.0" style="-fx-background-color: white; -fx-border-color: #e0e0e0; -fx-border-radius: 5;">
+                                 <padding>
+                                    <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                                 </padding>
+                                 <children>
+                                    <Label text="Прошедшие рейсы">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Separator />
+                                    <Label text="Щелкните правой кнопкой мыши по рейсу, чтобы оценить его" textFill="#757575">
+                                       <font>
+                                          <Font size="12.0" />
+                                       </font>
+                                    </Label>
+                                    
+                                    <!-- Прошедший рейс 1 -->
+                                    <AnchorPane fx:id="pastTrip1" onContextMenuRequested="#showRatingMenu" prefHeight="80.0" prefWidth="730.0" style="-fx-background-color: white; -fx-border-color: #e0e0e0; -fx-border-radius: 5;">
+                                       <children>
+                                          <Label layoutX="15.0" layoutY="10.0" text="Москва - Казань">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="15.0" layoutY="35.0" text="Дата: 10.05.2024 07:00 - 10.05.2024 14:30" />
+                                          <Label layoutX="15.0" layoutY="55.0" text="Место: 15, Автобус: Setra S 517 HDH" />
+                                          <Label layoutX="600.0" layoutY="30.0" text="2200 ₽" textFill="#1976d2">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                       </padding>
+                                    </AnchorPane>
+                                    
+                                    <!-- Прошедший рейс 2 -->
+                                    <AnchorPane fx:id="pastTrip2" onContextMenuRequested="#showRatingMenu" prefHeight="80.0" prefWidth="730.0" style="-fx-background-color: white; -fx-border-color: #e0e0e0; -fx-border-radius: 5;">
+                                       <children>
+                                          <Label layoutX="15.0" layoutY="10.0" text="Санкт-Петербург - Москва">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="15.0" layoutY="35.0" text="Дата: 20.04.2024 09:00 - 20.04.2024 16:00" />
+                                          <Label layoutX="15.0" layoutY="55.0" text="Место: 8, Автобус: Mercedes-Benz Travego" />
+                                          <Label layoutX="600.0" layoutY="30.0" text="2500 ₽" textFill="#1976d2">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                       </padding>
+                                    </AnchorPane>
+                                    
+                                    <!-- Прошедший рейс 3 -->
+                                    <AnchorPane fx:id="pastTrip3" onContextMenuRequested="#showRatingMenu" prefHeight="80.0" prefWidth="730.0" style="-fx-background-color: white; -fx-border-color: #e0e0e0; -fx-border-radius: 5;">
+                                       <children>
+                                          <Label layoutX="15.0" layoutY="10.0" text="Нижний Новгород - Москва">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="15.0" layoutY="35.0" text="Дата: 01.04.2024 11:00 - 01.04.2024 16:30" />
+                                          <Label layoutX="15.0" layoutY="55.0" text="Место: 19, Автобус: Volvo 9900" />
+                                          <Label layoutX="600.0" layoutY="30.0" text="1800 ₽" textFill="#1976d2">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                       </padding>
+                                    </AnchorPane>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </VBox>
+                     </content>
+                  </ScrollPane>
+               </content>
+            </Tab>
+         </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

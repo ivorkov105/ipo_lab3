@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #f8f8f8;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.ipo_9_code.Controllers.Passenger.TripDetailsController">
+   <children>
+      <ScrollPane fitToWidth="true" prefHeight="700.0" prefWidth="900.0" style="-fx-background-color: transparent;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <content>
+            <VBox spacing="20.0">
+               <children>
+                  <!-- Заголовок и основная информация -->
+                  <VBox spacing="10.0" style="-fx-background-color: white; -fx-border-color: #e0e0e0; -fx-border-radius: 5;">
+                     <children>
+                        <Label text="Москва - Санкт-Петербург">
+                           <font>
+                              <Font name="System Bold" size="24.0" />
+                           </font>
+                        </Label>
+                        <Label text="Дата и время: 01.06.2024 08:00 - 01.06.2024 15:00">
+                           <font>
+                              <Font size="14.0" />
+                           </font></Label>
+                        <HBox alignment="CENTER_LEFT" spacing="20.0">
+                           <children>
+                              <Label text="Цена: 2500 ₽" textFill="#1976d2">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label text="Рейтинг рейса: 4.8">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </children>
+                     <padding>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                     </padding>
+                  </VBox>
+
+                  <!-- Промежуточные остановки -->
+                  <VBox spacing="10.0" style="-fx-background-color: white; -fx-border-color: #e0e0e0; -fx-border-radius: 5;">
+                     <children>
+                        <Label text="Промежуточные остановки">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Separator />
+                        <VBox spacing="5.0">
+                           <children>
+                              <HBox spacing="10.0">
+                                 <Label text="1. Тверь" style="-fx-font-weight: bold;"/>
+                                 <Label text="(09:30 - 09:40)"/>
+                              </HBox>
+                              <HBox spacing="10.0">
+                                 <Label text="2. Вышний Волочёк" style="-fx-font-weight: bold;"/>
+                                 <Label text="(11:15 - 11:25)"/>
+                              </HBox>
+                              <HBox spacing="10.0">
+                                 <Label text="3. Тосно" style="-fx-font-weight: bold;"/>
+                                 <Label text="(14:20 - 14:30)"/>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                     <padding>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                     </padding>
+                  </VBox>
+
+                  <!-- Информация о водителе -->
+                  <VBox prefWidth="845.0" spacing="10.0" style="-fx-background-color: white; -fx-border-color: #e0e0e0; -fx-border-radius: 5;">
+                     <children>
+                        <Label text="Информация о водителе">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Separator />
+                        <HBox prefWidth="813.0" spacing="15.0">
+                           <children>
+                              <ImageView fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../images/avatar.png" />
+                                 </image>
+                              </ImageView>
+                              <VBox prefHeight="150.0" prefWidth="230.0" spacing="5.0">
+                                 <children>
+                                    <Label prefHeight="20.0" prefWidth="230.0" text="ФИО: Иванов Иван Иванович">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Стаж: 10 лет" />
+                                    <Label text="Рейтинг водителя: 4.9" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </children>
+                     <padding>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                     </padding>
+                  </VBox>
+
+                  <!-- Информация о транспортном средстве -->
+                  <VBox spacing="10.0" style="-fx-background-color: white; -fx-border-color: #e0e0e0; -fx-border-radius: 5;">
+                     <children>
+                        <Label text="Информация о транспортном средстве">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Separator />
+                        <HBox spacing="15.0">
+                           <children>
+                              <ImageView fitHeight="150.0" fitWidth="250.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../images/trip1.jpg" />
+                                 </image>
+                              </ImageView>
+                              <VBox spacing="5.0">
+                                 <children>
+                                    <Label text="Модель: Mercedes-Benz Travego">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Количество мест: 45" />
+                                    <Label text="Рейтинг автобуса: 4.7" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </children>
+                     <padding>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                     </padding>
+                  </VBox>
+
+                  <!-- Схема автобуса и выбор места -->
+                  <VBox spacing="10.0" style="-fx-background-color: white; -fx-border-color: #e0e0e0; -fx-border-radius: 5;">
+                     <children>
+                        <Label text="Выбор места">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Separator />
+                        <GridPane alignment="CENTER" hgap="5.0" vgap="5.0">
+                           <children>
+                              <!-- Ряд 1 -->
+                              <StackPane GridPane.columnIndex="0" GridPane.rowIndex="0">
+                                 <children>
+                                    <Rectangle arcHeight="5" arcWidth="5" height="30" stroke="BLACK" width="30">
+                                       <fill>
+                                          <Color red="0.0" green="0.8" blue="0.0" />
+                                       </fill>
+                                    </Rectangle>
+                                    <Text fill="WHITE" text="1" />
+                                 </children>
+                              </StackPane>
+                              <StackPane GridPane.columnIndex="1" GridPane.rowIndex="0">
+                                 <children>
+                                    <Rectangle arcHeight="5" arcWidth="5" height="30" stroke="BLACK" width="30">
+                                       <fill>
+                                          <Color red="0.0" green="0.8" blue="0.0" />
+                                       </fill>
+                                    </Rectangle>
+                                    <Text fill="WHITE" text="2" />
+                                 </children>
+                              </StackPane>
+                              <StackPane GridPane.columnIndex="2" GridPane.rowIndex="0">
+                                 <children>
+                                    <Rectangle arcHeight="5" arcWidth="5" height="30" stroke="BLACK" width="30">
+                                       <fill>
+                                          <Color red="1.0" green="0.0" blue="0.0" />
+                                       </fill>
+                                    </Rectangle>
+                                    <Text fill="WHITE" text="3" />
+                                 </children>
+                              </StackPane>
+                              <!-- И так далее для остальных мест... -->
+                           </children>
+                           <columnConstraints>
+                              <ColumnConstraints />
+                              <ColumnConstraints />
+                              <ColumnConstraints />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints />
+                           </rowConstraints>
+                        </GridPane>
+                        <HBox alignment="CENTER" spacing="20.0">
+                           <children>
+                              <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #FFA000; -fx-text-fill: white;" text="Забронировать">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Button>
+                              <Button mnemonicParsing="false" onAction="#buySeat" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #4CAF50; -fx-text-fill: white;" text="Купить билет">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </HBox>
+                     </children>
+                     <padding>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                     </padding>
+                  </VBox>
+
+                  <!-- Отзывы о рейсе -->
+                  <VBox spacing="10.0" style="-fx-background-color: white; -fx-border-color: #e0e0e0; -fx-border-radius: 5;">
+                     <children>
+                        <Label text="Отзывы пассажиров">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Separator />
+
+                        <!-- Отзыв 1 -->
+                        <VBox spacing="5.0" style="-fx-border-color: #e0e0e0; -fx-border-radius: 3;">
+                           <children>
+                              <HBox alignment="CENTER_LEFT" spacing="10.0">
+                                 <children>
+                                    <Label style="-fx-font-weight: bold;" text="Анна К." />
+                                    <Label text="Рейтинг: 5.0" textFill="#4caf50" />
+                                 </children>
+                              </HBox>
+                              <Label text="Прекрасная поездка, комфортный автобус и вежливый водитель. Всё точно по расписанию." wrapText="true" />
+                           </children>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                        </VBox>
+
+                        <!-- Отзыв 2 -->
+                        <VBox spacing="5.0" style="-fx-border-color: #e0e0e0; -fx-border-radius: 3;">
+                           <children>
+                              <HBox alignment="CENTER_LEFT" spacing="10.0">
+                                 <children>
+                                    <Label style="-fx-font-weight: bold;" text="Петр С." />
+                                    <Label text="Рейтинг: 4.5" textFill="#4caf50" />
+                                 </children>
+                              </HBox>
+                              <Label text="В целом хорошо, но кондиционер работал слабовато. Водитель профессионал." wrapText="true" />
+                           </children>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                        </VBox>
+
+                        <!-- Отзыв 3 -->
+                        <VBox spacing="5.0" style="-fx-border-color: #e0e0e0; -fx-border-radius: 3;">
+                           <children>
+                              <HBox alignment="CENTER_LEFT" spacing="10.0">
+                                 <children>
+                                    <Label style="-fx-font-weight: bold;" text="Мария Д." />
+                                    <Label text="Рейтинг: 5.0" textFill="#4caf50" />
+                                 </children>
+                              </HBox>
+                              <Label text="Отличная поездка! Автобус новый, чистый, есть розетки для зарядки телефонов. Водитель был вежлив и аккуратен." wrapText="true" />
+                           </children>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                        </VBox>
+                     </children>
+                     <padding>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                     </padding>
+                  </VBox>
+
+                  <!-- Кнопка возврата -->
+                  <Button layoutX="50.0" layoutY="530.0" mnemonicParsing="false" onAction="#goBack" prefHeight="40.0" prefWidth="150.0" style="-fx-background-color: #757575; -fx-text-fill: white;" text="Вернуться назад">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </padding>
+            </VBox>
+         </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>
